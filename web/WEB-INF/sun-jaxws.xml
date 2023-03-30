@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+  <endpoint implementation="com.example.endpoint.TripEndpoint" name="TripEndpoint" url-pattern="/TripEndpoint"/>
+  <endpoint implementation="com.example.endpoint.CreditCardEndpoint" name="CreditCardEndpoint" url-pattern="/CreditCardEndpoint"/>
+</endpoints>
