@@ -8,6 +8,6 @@ package ws;
  *
  * @author Admin
  */
-public class checkCardStatus_Service {
+public class calculateFeeStatus_Service {
     
 }

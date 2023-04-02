@@ -2,12 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package dao;
 
 /**
  *
  * @author Admin
  */
-public class Checking {
+public class CalculateDAO extends DAO{
+
+    public CalculateDAO() {
+    }
     
 }
