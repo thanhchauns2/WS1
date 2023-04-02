@@ -1,0 +1,27 @@
+CREATE TABLE package (
+    package_id INT AUTO_INCREMENT PRIMARY KEY,
+    package_name VARCHAR(255) NOT NULL,
+    package_description TEXT,
+    price DOUBLE NOT NULL,
+    max_guests INT NOT NULL
+);
+
+CREATE TABLE promo (
+    promo_id INT AUTO_INCREMENT PRIMARY KEY,
+    promo_code VARCHAR(255) NOT NULL,
+    promo_description TEXT,
+    discount_value DOUBLE NOT NULL,
+    max_uses INT NOT NULL,
+    expire_date DATE NOT NULL
+);
+
+CREATE TABLE booking (
+    booking_id INT AUTO_INCREMENT PRIMARY KEY,
+    package_id INT NOT NULL,
+    guests INT NOT NULL,
+    promo_code VARCHAR(255),
+    final_price DOUBLE NOT NULL,
+    booking_date DATETIME NOT NULL,
+    FOREIGN KEY (package_id) REFERENCES package (package_id),
+    FOREIGN KEY (promo_code) REFERENCES promo (promo_code)
+);

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Metro/2.4.4 (RELEASE-2.4.4-ce05bec; 2020-04-17T12:44:48+0000) JAXWS-RI/2.3.3 JAXWS-API/2.3.3 JAXB-RI/2.3.3 JAXB-API/2.3.3 git-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
+
+<xs:element name="calculateFee" type="tns:calculateFee"/>
+
+<xs:element name="calculateFeeResponse" type="tns:calculateFeeResponse"/>
+
+<xs:complexType name="calculateFee">
+<xs:sequence>
+<xs:element name="cardHolderName" type="xs:string" minOccurs="0"/>
+<xs:element name="cardType" type="xs:string" minOccurs="0"/>
+<xs:element name="cardNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="cvcNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="expMonth" type="xs:int"/>
+<xs:element name="expYear" type="xs:int"/>
+<xs:element name="totalAmount" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateFeeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
